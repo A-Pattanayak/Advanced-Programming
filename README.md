@@ -38,3 +38,8 @@ You must have:
 3. Dynamic Theme Toggling using conditional styling or ternary operators
 4. Clean code with meaningful names such as handleIncrement and toggleTheme
 5. No obvious runtime crashes during interactions
+## Demo Note
+
+A demo video for the React Native counter and theme toggle app is included in this branch as `Assignment 19/Demo video.mov`.
+
+The project was run and demonstrated on an Android emulator because I use an iOS device and did not have access to a physical Android device.
