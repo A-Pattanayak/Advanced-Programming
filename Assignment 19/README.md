@@ -1,97 +1,64 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+﻿# Assignment 19 - React Native Counter App
 
-# Getting Started
+## Project Overview
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project is a single-screen React Native mobile application built for Assignment 19 of the Advanced Programming course.
 
-## Step 1: Start Metro
+The application works as a simple digital counter with a theme toggle feature. It allows the user to increment, decrement, and reset a counter value while also switching the interface between Light Mode and Dark Mode.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Features
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- Counter starts from 0
+- Increment button increases the counter by 1
+- Decrement button decreases the counter by 1
+- Counter does not go below 0
+- Reset button brings the counter back to 0
+- Theme Toggle button switches between Light Mode and Dark Mode
+- UI is centered using React Native Flexbox layout
+- Code is separated into reusable components and a custom hook
 
-```sh
-# Using npm
-npm start
+## Technologies Used
 
-# OR using Yarn
-yarn start
+- React Native
+- JavaScript
+- React Hooks
+- useState
+- Flexbox styling
+
+## Project Structure
+
+```text
+Assignment 19/
+  App.js
+  src/
+    components/
+      CounterButton.js
+      CounterControls.js
+      CounterDisplay.js
+      ThemeToggleButton.js
+    hooks/
+      useCounter.js
+  android/
+  ios/
+  package.json
 ```
 
-## Step 2: Build and run your app
+## Implementation Details
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+The counter state is managed using the `useState` hook. The counter update logic is separated into a custom hook so that the UI components remain clean and focused only on rendering.
 
-### Android
+The decrement logic includes a condition to prevent the counter from becoming negative. The theme state is also managed using `useState`, and conditional styles are applied based on the selected theme.
 
-```sh
-# Using npm
-npm run android
+## Demo Video
 
-# OR using Yarn
-yarn android
+The demo video is included in the `assignment-19` branch as:
+
+```text
+Demo video.mov
 ```
 
-### iOS
+The video has been kept outside the `Assignment 19` project folder, but inside the same assignment branch.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## Emulator Note
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+The project was run and demonstrated on an Android emulator because I use an iOS device and did not have access to a physical Android device.
